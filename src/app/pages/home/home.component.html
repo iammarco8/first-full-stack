@@ -1,0 +1,11 @@
+<input type="button" value="Fetch Data" (click)="fetchStudents()">
+
+<h2>Students</h2>
+
+<li *ngFor="let student of students">
+    {{student ['first_name']}}
+    <br>
+    {{student ['last_name']}}
+    <br>
+    {{student ['phone']}}
+</li>
