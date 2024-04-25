@@ -1,0 +1,68 @@
+
+
+
+<!-- <form (ngSubmit)="studentlist()"  #createForm="ngForm"> -->
+  <!-- <input type="text" class="form-control" [(ngModel)]="student.id" [ngModelOptions]="{standalone: true}">  -->
+  <!-- why didnt anybody tell me about this?-->
+  <!-- <div>    
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form> -->
+
+
+<br><br><hr><hr>
+
+
+<form class="row gx-3 gy-2 align-items-center" (ngSubmit)="studentlist()"  #createForm="ngForm">
+    <div class="col-sm-3">
+      <label  for="specificSizeInputFirstName">First Name</label>
+      <input type="text" class="form-control" id="specificSizeInputFirstName" name="first_name" [ngModelOptions]="{standalone: true}" [(ngModel)]="student.first_name" placeholder="Jane">
+      
+    </div>
+    <h1>{{student.value}}</h1>
+    <div class="col-sm-3">
+      <label  for="specificSizeInputLastName">Last Name</label>
+      <input type="text" class="form-control" [(ngModel)]="student.last_name" name="last_name" [ngModelOptions]="{standalone: true}" id="specificSizeInputLastName" placeholder="Doe">
+    </div>
+    <div class="col-sm-3">
+      <div class="input-group">
+        <label for="specificSizeInputGroupPhone">Phone Number</label>
+        <input type="text" class="form-control" [(ngModel)]="student.phone_number" name="phone_number" [ngModelOptions]="{standalone: true}" id="specificSizeInputGroupPhone" placeholder="876-***-****">
+      </div>
+    </div>
+  
+
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+   <!-- this is where it is: <br> {{ student.first_name }} <br> -->
+  </form>
+
+  <div *ngFor="let student of students">
+    {{student.id}}
+    {{student.first_name}}
+    {{student.last_name}}
+    {{student.phone_number}}
+  </div>
+
+  <!-- <br><br><br><br><hr>
+  take a look
+  here
+  <input type="text" [(ngModel)]="these" name="" id="">
+  here:{{ these[0].value }}
+  here:{{ these}}
+<br><br>
+<br><br><br><br><br><br><br><br>
+
+
+<form (ngSubmit)="addMovie()" #movieForm="ngForm">
+  <label for="title">movie Title</label><br><br>
+  <input type="text" name="title" id="title"[(ngModel)]="movie.title" [ngModelOptions]="{standalone: true}">
+  <button type="submit">Add Movie</button>
+</form>
+
+<div *ngFor="let movie of movies">
+{{movie.title}}
+</div> -->

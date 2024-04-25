@@ -1,0 +1,66 @@
+
+<form class="row gx-3 gy-2 align-items-center">
+    <div class="col-sm-3">
+      <label  for="specificSizeInputFirstName">First Name</label>
+      <input type="text" class="form-control" id="specificSizeInputFirstName" [(ngModel)]="student" placeholder="Jane">
+      
+    </div>
+    <div class="col-sm-3">
+      <label  for="specificSizeInputLastName">Last Name</label>
+      <input type="text" class="form-control" id="specificSizeInputLastName" placeholder="Doe">
+    </div>
+    <div class="col-sm-3">
+      <label for="specificSizeInputGroupPhone">Phone Number</label>
+      <div class="input-group">
+        <!-- <div class="input-group-text">@</div> -->
+        <input type="text" class="form-control" id="specificSizeInputGroupPhone" placeholder="876-***-****">
+      </div>
+    </div>
+  
+
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+  <br><br><br><br><hr>
+
+<input type="text" [(ngModel)]="ths">
+
+   this is where it is:; <br> ljkhv{{ student }}hfk
+   this is where it is:; <br> ljkhv {{ ths }} hfk
+
+
+
+
+<form class="row gx-3 gy-2 align-items-center">
+    <div class="col-sm-3">
+      <label  for="specificSizeInputFirstName">First Name</label>
+      <input type="text" class="form-control" id="specificSizeInputFirstName" [(ngModel)]="student.first_name" placeholder="Jane">
+      <!-- <input type="text" [(ngModel)]="student.first_name"> -->
+      
+    </div>
+    <!-- <h1>{{student.value}}</h1> -->
+    <div class="col-sm-3">
+      <label  for="specificSizeInputLastName">Last Name</label>
+      <input type="text" class="form-control" [(ngModel)]="student.last_name" id="specificSizeInputLastName" placeholder="Doe">
+    </div>
+    <div class="col-sm-3">
+      <div class="input-group">
+        <label for="specificSizeInputGroupPhone">Phone Number</label>
+        <input type="text" class="form-control" [(ngModel)]="student.phone_number" id="specificSizeInputGroupPhone" placeholder="876-***-****">
+      </div>
+    </div>
+  
+
+    <div class="col-auto">
+      <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    </div>
+   this is where it is: <br> {{ student[0].first_name }} <br>
+  </form>
+  <br><br><br><br><hr>
+  take a look
+  here
+  <input type="text" [(ngModel)]="these" name="" id="">
+  here:{{ these[0].value }}
+<br><br>
+<br><br><br><br><br><br><br><br>
